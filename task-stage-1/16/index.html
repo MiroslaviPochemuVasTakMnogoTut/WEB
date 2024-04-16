@@ -29,20 +29,31 @@
         }
 
         .banner{
+            height: 300px;
             border: 1px solid red;
-            padding: 20px;
+            position:relative;
         }
+
         .banner__wrapper{
+            margin-top: 20px;
+            margin-left: 20px;
+            background-color: #000;
+            position: absolute;
+            max-width: 600px;
+            z-index: 2;
+        }
+        
+        .banner__img{
             height: 300px;
         }
-        .banner__img{
-            height: 340px;
-        }
-
+        
         .banner__content{
-
+            padding: 20px;
         }
         .banner__media{
+            position: absolute;
+            right: 0;
+            z-index: 1;
 
         }
     </style>
