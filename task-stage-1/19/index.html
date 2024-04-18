@@ -84,7 +84,22 @@
             border: 1px solid black;
             display: flex;
             flex-direction: column;
+            cursor: pointer;
+            transition: border 150ms ease-in;
         }
+
+        .item:hover {
+            border: 1px #FF5722 solid;
+        }
+
+        .item:hover .item__bg{
+            background-color:#FF5722;
+        }
+
+        .item:hover .item__footer{
+            background-color:#FF5722;
+        }
+
         .item__name{
             margin-bottom: 10px;
             font-size: 18px;
@@ -137,8 +152,18 @@
     <style>
         .arrow{
             display: inline-flex;
+            transition: transform 0.5s ease;
         }
         .arrow:hover{
+            transform: rotate(180deg);
+        }
+
+        .arrow svg {
+            transition: stroke 0.5s ease;
+        }
+
+        .arrow:hover svg{
+            stroke: #FF5722;
         }
     </style>
     <div class="container">
@@ -152,12 +177,23 @@
 
     <style>
         .cloud {
-            /* animation: ..... */
+            animation: rotating1 3.5s linear infinite;
         }
 
-        /* @keyframes названиеАнимации {
+        @keyframes rotating1 {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(20px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+            
+            
+        }
 
-        } */
     </style>
 
     <div class="container">
@@ -192,14 +228,20 @@
 
         .stacked-card__card--1{
             background-color: red;
+            z-index: 5;
+            transform: rotate(5deg);
         }
 
         .stacked-card__card--2{
             background-color: blue;
+            z-index: 2;
+            transform: rotate(15deg);
         }
 
         .stacked-card__card--3{
-            background-color: yellow;
+            background-color: #FFEB3B;
+            z-index: 3;
+            transform: rotate(25deg);
         }
 
     </style>

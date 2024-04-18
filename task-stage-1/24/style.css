@@ -62,6 +62,8 @@ body{
 }
 .page{}
 .page__cell{
+    margin: 0 auto;
+    max-width: 90%;
     margin-bottom: 30px;
 }
 
@@ -89,12 +91,13 @@ body{
 }
 
 .gallery{
-    display: grid;
-    grid-template-columns: repeat(9, minmax(0, 1fr));
+    display: flex;
+    justify-content: center ;
     gap: 20px;
-    padding: 0 100px;
+    flex-wrap: wrap;
 }
 .gallery__item{
     height: 200px;
+    width: 100px;
     background-color: beige;
 }
