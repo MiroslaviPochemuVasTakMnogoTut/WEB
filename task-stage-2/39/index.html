@@ -59,8 +59,8 @@
             cart.forEach(o => {
                 sum += products.find(p => p.id === o.id).price * o.quantity
             });
-            Intl.NumberFormat({})
-            return sum;
+            
+            return Intl.NumberFormat("ru-RU", { style: "currency", currency: "RUB" }).format(sum);;
         }
 
         const result = getTotal(cart, products);
