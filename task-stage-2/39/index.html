@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задание 39</title>
 </head>
-<body>
+
+<div id="biba"></div>
+<body id="body">
     <script>
         const products = [
             {
@@ -53,11 +56,20 @@
 
         function getTotal(cart, products) {
             let sum = 0;
-
+            cart.forEach(o => {
+                sum += products.find(p => p.id === o.id).price * o.quantity
+            });
+            Intl.NumberFormat({})
+            return sum;
         }
 
         const result = getTotal(cart, products);
+        const element = document.createElement('h');
+        element.textContent = result;
+        const biba = document.getElementById('biba')
+        biba.appendChild(element);
         console.log(result);
     </script>
 </body>
+
 </html>
