@@ -35,9 +35,9 @@
             },
         ]
 
-        const filterList = '....';
-        const transformList = '....';
-        const sortedList = '....';
+        const filterList = listUsers.filter(o => o.isAdult);
+        const transformList = filterList.map(o => {return {...o, birthday: new Date(o.birthday).toLocaleDateString('ru-RU')}});
+        const sortedList = [...transformList].sort(o => o.firstName.localeCompare());
 
         console.log(filterList)
         console.log(transformList)
