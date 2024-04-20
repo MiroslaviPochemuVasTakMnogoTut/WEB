@@ -236,7 +236,7 @@ ps.
 реализовать по желанию.
 
 ### 62. Cookie и LocalStorage
-  - [ ] Complete
+  - [x] Complete
 
 #### Работа с cookie и localStorage
 
