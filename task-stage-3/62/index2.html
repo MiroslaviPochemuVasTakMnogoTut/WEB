@@ -39,7 +39,15 @@
     </div>
 
     <script>
+        const input = document.querySelector('.js-input');
+        const butt = document.querySelector('.js-button');
+        const span = document.querySelector('.js-name');
 
+        butt.addEventListener('click', () => {
+            span.Text = input.value;
+            localStorage.setItem('object', JSON.stringify({'name' : input.value}));
+            console.log(JSON.parse(localStorage.getItem('object')));
+        })
 
     </script>
 </body>
