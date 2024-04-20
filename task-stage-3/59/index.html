@@ -44,6 +44,31 @@
         const list = document.querySelector('.list')
         const input = document.querySelector('.search__input')
 
+        function render(lst) {
+            list.innerHTML = '';
+            lst.forEach(o => {
+            const element = document.createElement('li');
+            element.innerText = o;
+            list.appendChild(element);
+        })
+        }
+        render(words);
+        const butt1 = document.querySelector('.search__btn');
+        const butt2 = document.querySelector('.search__clear');
+        butt1.addEventListener('click', () => {
+            const fword = [...words].filter(o => o.toLowerCase().includes(input.value.toLowerCase()));
+            render(fword);
+            // console.log(fword);
+        })
+        butt2.addEventListener('click', () => {
+            input.value ='';
+            render(words);
+        })
+        list.addEventListener('click', event => {
+            event.target.classList.toggle('list__element--active');
+
+        })
+        // console.log(input.nodeValue)
 
     </script>
 </body>
