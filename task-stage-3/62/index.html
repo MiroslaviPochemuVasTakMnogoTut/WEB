@@ -38,11 +38,18 @@
         <h1>Ваше имя <span class="js-name"></span></h1>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js">
+        const Cookies = import('js-cookie');
+    </script>
     <script>
-
-
+        const input = document.querySelector('.js-input');
+        const butt = document.querySelector('.js-button');
+        const span = document.querySelector('.js-name');
+        butt.addEventListener('click', () => {
+            span.Text = input.value;
+            Cookies.set('name', input.value, { expires: 3 })
+            console.log(Cookies.get('name'));
+        })
     </script>
 </body>
 </html>

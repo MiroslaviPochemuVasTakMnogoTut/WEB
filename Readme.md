@@ -240,7 +240,7 @@ ps.
 
 #### Работа с cookie и localStorage
 
-#### Задача 1.
+#### [Задача 1.](task-stage-3/62/index.html)
 при нажатии на кнопку сохранить, нужно сохранить значение введенное в input'е в cookie, на 3 дня.
 и вывести это значение в span с классом js-name.
 если закрыть страницу, и открыть снова, то имя должно появится сразу
@@ -256,7 +256,7 @@ python3 -m http.server 8900 или python -m http.server 8900, команда з
 https://github.com/js-cookie/js-cookie
 
 
-#### Задача 2.
+#### [Задача 2.](task-stage-3/62/index2.html)
 index2.html
 тоже самое сделать с localStorage (здесь локальный сервер не нужен)
 усложним задачу, в localStorage нужно сохранить объект, например {name: 'тут введенное значение из инпута'}
@@ -268,7 +268,7 @@ https://i.gyazo.com/51f81217bc93b055086318bec0a0e13b.png
 
 
 
-### 63. Запросы 1
+### [63. Запросы 1](task-stage-3/63/index.html)
   - [ ] Complete
 
 сделать запрос по адресу https://jsonplaceholder.typicode.com/posts/
