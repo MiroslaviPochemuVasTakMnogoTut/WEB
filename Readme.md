@@ -269,7 +269,7 @@ https://i.gyazo.com/51f81217bc93b055086318bec0a0e13b.png
 
 
 ### [63. Запросы 1](task-stage-3/63/index.html)
-  - [ ] Complete
+  - [x] Complete
 
 сделать запрос по адресу https://jsonplaceholder.typicode.com/posts/
 через fetch
